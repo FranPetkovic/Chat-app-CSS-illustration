@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root{
+    /* txt */
+    --svjLjubicasta:hsl(276, 100%, 81%);
+    --ljubicasta:hsl(276, 55%, 52%);
+    --tamnoLjubicasta:hsl(271, 15%, 43%);
+    --sivoPlava:hsl(206, 6%, 79%);
+    --jakoTamnaLjubicasta:hsl(271, 36%, 24%);
+    --sivoLjubicasta:hsl(270, 7%, 64%);
+    /* gradiant */
+    --svjMag:hsl(293, 100%, 63%);
+    --svjLj:hsl(264, 100%, 61%);
+    /* ostale */
+    --bijela:hsl(270, 20%, 96%);
+    --svjSivoLjubicasta:hsl(270, 20%, 96%);
+    --jakoTamnaLjubicasta2:hsl(271, 36%, 24%);
+    --jakoSvjMag:hsl(289, 100%, 72%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--svjSivoLjubicasta);
+    width: 100%;
+    min-height: 100vh;
+}
+p{
+    font-size: 16px;
+}
+.oblik{
+    background: linear-gradient(200deg,hsl(293, 100%, 63%),hsl(264, 100%, 61%) 100%);
+    width: 600px;
+    height: 700px;
+    border-radius: 0 0 300px 300px;
+    transform: translateX(-10%);
+}
