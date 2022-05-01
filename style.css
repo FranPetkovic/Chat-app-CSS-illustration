@@ -2,7 +2,7 @@
 
 :root{
     /* txt */
-    --svjLjubicasta:hsl(276, 100%, 81%);
+    --svjLjubicasta:rgb(216, 158, 255);
     --ljubicasta:hsl(276, 55%, 52%);
     --tamnoLjubicasta:hsl(271, 15%, 43%);
     --sivoPlava:hsl(206, 6%, 79%);
@@ -24,17 +24,228 @@
 }
 body{
     font-family: 'Rubik', sans-serif;
-    background-color: var(--svjSivoLjubicasta);
+    /* background-color: var(--svjSivoLjubicasta); */
+    background-color: var(--svjSivoLjubicasta);;
     width: 100%;
     min-height: 100vh;
 }
 p{
     font-size: 16px;
 }
+.arrow {
+    border: solid var(--bijela);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  .left {
+    transform: rotate(135deg);
+  }
+  .right {
+    transform: rotate(-45deg);
+  }
 .oblik{
     background: linear-gradient(200deg,hsl(293, 100%, 63%),hsl(264, 100%, 61%) 100%);
     width: 600px;
-    height: 700px;
+    height: 850px;
     border-radius: 0 0 300px 300px;
     transform: translateX(-10%);
+    margin: 0;
+}
+.oblik2{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgba(216, 158, 255,0.3);
+    width: 500px;
+    height: 850px;
+    border-radius: 250px 250px 0 0;
+}
+.pomocnidiv{
+    position: absolute;
+    top: 50%;
+    transform: translate(100%,-55%);
+}
+.mobitel{
+    position: relative;
+    max-width: 400px;
+    /* background-color: var(--svjSivoLjubicasta); */
+    background-color: white;
+    border-radius: 20px;
+    border: 10px white solid;
+}
+.vrh{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+.info{
+    background:linear-gradient(-90deg,hsl(293, 100%, 63%),hsl(264, 100%, 61%) 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr 1fr;
+    padding: 20px 5px 5px 5px;
+    align-items: center;
+    justify-items: center;
+    color: var(--bijela);
+    border-radius: 25px 25px 10px 10px;
+}
+.info img{
+    width: 100%;
+    border-radius: 50%;
+    border: 2px var(--bijela) solid;
+}
+.info h1{
+    font-size: 18px;
+}
+.info div{
+    width: 90%;
+}
+
+.info div p{
+    font-size: 12px!important;
+    color: var(--svjLjubicasta);
+}
+.sivo{
+    background-color: var(--svjSivoLjubicasta);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px 0px;
+}
+.poruka{
+    margin: 5px 10px;
+    max-width: 270px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.poruka1{
+    align-self: flex-start;
+    border-radius: 15px 15px 15px 5px;
+    color: var(--ljubicasta);
+    background-color: hsl(270, 22%, 93%);
+}
+.poruka2{
+    align-self: flex-end;
+    border-radius: 15px 15px 5px 15px;
+    color: var(--tamnoLjubicasta);
+    background-color: white;
+}
+.poruka2-slike{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+.poruka2-slike img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cijene{
+    display: flex;
+    align-items: center;
+    color: white;
+    background:linear-gradient(90deg,hsl(293, 100%, 63%),hsl(264, 100%, 61%) 100%);
+}
+.cijene>*{
+    margin: 0 10px;
+}
+.cijene h1{
+    font-size: 20px;
+}
+.cijene p{
+    font-size: 14px;
+}
+.cijene input{
+    border-radius: 50%;
+}
+.cijene div{
+    display: flex;
+    gap: 5px;
+}
+#checkbox1{
+        width: 1.3em;
+        height: 1.3em;
+        border-radius: 50%;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        cursor: pointer;
+}
+#checkbox1:checked {
+    background-color: var(--bijela);
+}
+.upis{
+    width: 90%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.upis p{
+ color:var(--sivoPlava);
+}
+.upis div{
+    background-color: var(--jakoTamnaLjubicasta);
+    padding: 10px 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    max-width: 550px;
+    line-height: 30px;
+}
+.content p{
+    font-size: 18px;
+    margin: 40px 0px;
+    color: var(--sivoLjubicasta);
+}
+.content h1{
+    font-size: 44px;
+    color: var(--jakoTamnaLjubicasta);
+}
+@media only screen and (max-device-width: 425px) {
+    body{
+        height: 1100px;
+    }
+    .oblik{
+        transform: translate(-75%,-10%);
+    }
+    .pomocnidiv{
+        position: absolute;
+        transform: translate(10%, -45%);
+    }
+    .mobitel{
+        position: relative;
+        max-width: 350px;
+        /* background-color: var(--svjSivoLjubicasta); */
+        background-color: white;
+        border-radius: 20px;
+        border: 10px white solid;
+    }
+    .oblik2{
+        display: none;
+    }
+    .content{
+        position: absolute;
+        top: 120%;
+        left: 5%;
+    }
 }
